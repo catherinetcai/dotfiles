@@ -1,4 +1,5 @@
 ### BASE LAPTOP DEPENDENCIES ###
+
 ## BASE ##
 # Text Editor
 brew 'neovim'
@@ -13,6 +14,7 @@ brew 'watch'
 brew 'xz'
 # For oh-my-zsh
 brew 'zsh'
+
 ## CASK ##
 # Git diff tool
 cask 'diffmerge'
@@ -21,6 +23,7 @@ cask 'firefox'
 cask 'google-chrome'
 # Window manager
 cask 'phoenix'
+cask 'slack'
 
 ### LANGUAGES ###
 
