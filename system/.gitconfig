@@ -1,0 +1,46 @@
+## SETTINGS ##
+[core]
+  excludesfile = /Users/catcai/.gitignore_global
+[credential]
+  helper = osxkeychain
+[push]
+  default = current
+[user]
+  name = Cat Cai
+  email = catherinetcai@gmail.com
+[url "git@github.com:"]
+  insteadOf = "https://github.com/"
+
+## COLORS ##
+[color]
+  ui = always
+[color "diff"]
+  meta = yellow bold
+  commit = green bold
+  frag = magenta bold
+  old = red bold
+  new = green bold
+whitespace = red reverse
+[color "diff-highlight"]
+  oldNormal = red bold
+  oldHighlight = red bold 52
+  newNormal = green bold
+  newHighlight = green bold 22
+
+## ALIASES ##
+[alias]
+  # Initialize empty
+  it = !git init && git commit -m "root" --allow-empty
+  # Short status on the branch
+  shorty = status --short --branch
+  # Prettify git log
+  lga = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative --branches
+[diff]
+  tool = diffmerge
+[difftool "diffmerge"]
+  cmd = /usr/local/bin/diffmerge \"$LOCAL\" \"$REMOTE\"
+[merge]
+  tool = diffmerge
+[mergetool "diffmerge"]
+  trustExitCode = true
+  cmd = /usr/local/bin/diffmerge --merge --result=\"$MERGED\" \"$LOCAL\" \"$BASE\" \"$REMOTE\"

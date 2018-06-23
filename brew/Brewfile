@@ -1,0 +1,38 @@
+### BASE LAPTOP DEPENDENCIES ###
+## BASE ##
+# Text Editor
+brew 'neovim'
+# SECURITY
+brew 'openssl'
+# Pyenv dep
+brew 'readline'
+# Searcher - faster grep
+brew 'ripgrep'
+# Pyenv dep
+brew 'watch'
+brew 'xz'
+# For oh-my-zsh
+brew 'zsh'
+## CASK ##
+# Git diff tool
+cask 'diffmerge'
+# Muh browsers
+cask 'firefox'
+cask 'google-chrome'
+# Window manager
+cask 'phoenix'
+
+### LANGUAGES ###
+
+## GO ##
+brew 'go'
+
+## NODE ##
+brew 'node'
+
+## PYTHON ##
+brew 'pyenv'
+brew 'pyenv-virtualenv'
+
+## RUBY ##
+brew 'rbenv'

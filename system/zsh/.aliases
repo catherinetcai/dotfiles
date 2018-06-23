@@ -1,0 +1,17 @@
+### GENERAL ###
+if type nvim >/dev/null 2>&1; then
+  alias vim='nvim'
+fi
+
+## Navigation ##
+alias godir="cd $HOME/go/src/github.com/"
+alias mydir="cd $HOME/go/src/github.com/catherinetcai"
+
+### LANGUAGE/Implementation Specific ###
+## K8 ##
+alias k8="kubectl"
+alias wk8="watch kubectl"
+
+## Ruby ##
+alias be="bundle exec"
+alias bi="bundle install"
