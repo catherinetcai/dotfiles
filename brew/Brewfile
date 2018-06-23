@@ -24,6 +24,7 @@ cask 'flux'
 cask 'firefox'
 cask 'google-chrome'
 cask 'insomnia'
+cask 'iterm2'
 cask 'nordvpn'
 cask 'postico'
 # Window manager
