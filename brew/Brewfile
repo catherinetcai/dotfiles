@@ -16,14 +16,22 @@ brew 'xz'
 brew 'zsh'
 
 ## CASK ##
+cask '1password'
 # Git diff tool
 cask 'diffmerge'
+cask 'flux'
 # Muh browsers
 cask 'firefox'
 cask 'google-chrome'
+cask 'insomnia'
+cask 'nordvpn'
+cask 'postico'
 # Window manager
 cask 'phoenix'
 cask 'slack'
+cask 'spotify'
+cask 'spotify-notifications'
+cask 'vlc'
 
 ### LANGUAGES ###
 
