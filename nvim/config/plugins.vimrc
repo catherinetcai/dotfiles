@@ -72,6 +72,8 @@ let g:terraform_align=1
 " JavaScript/JSX/Typescript
 " Highlight .js as well as .jsx
 let g:jsx_ext_required=0
+" Compile TypeScript on save
+autocmd BufWritePost *.ts,*.tsx make
 
 " Rust
 " Run Rust autoformat on save

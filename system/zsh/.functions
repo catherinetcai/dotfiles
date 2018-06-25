@@ -38,3 +38,8 @@ function cleanup_local() {
   fi
 }
 
+## General ##
+# Returns what app is running on specified port
+function whichapp() {
+  lsof -i tcp:$1
+}
