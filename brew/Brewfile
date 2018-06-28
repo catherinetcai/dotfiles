@@ -2,6 +2,7 @@
 
 ## BASE ##
 brew 'dep'
+brew 'hugo'
 # Text Editor
 brew 'neovim'
 # SECURITY
@@ -20,6 +21,7 @@ brew 'zsh'
 
 ## CASK ##
 cask '1password'
+cask 'android-studio'
 # Git diff tool
 cask 'diffmerge'
 cask 'flux'
@@ -28,6 +30,7 @@ cask 'firefox'
 cask 'google-chrome'
 cask 'insomnia'
 cask 'iterm2'
+cask 'java'
 cask 'nordvpn'
 cask 'postico'
 # Window manager
