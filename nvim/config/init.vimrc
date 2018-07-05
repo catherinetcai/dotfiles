@@ -48,7 +48,7 @@ Plug 'ekalinin/Dockerfile.vim'
 
 " Go
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-Plug 'nsf/gocode', { 'rtp': 'nvim', 'do': '~/.config/nvim/plugged/gocode/nvim/symlink.sh' }
+Plug 'mdempsky/gocode', { 'rtp': 'nvim', 'do': '~/.config/nvim/plugged/gocode/nvim/symlink.sh' }
 Plug 'zchee/deoplete-go', { 'do': 'make'}
 
 " Hashicorp Tools

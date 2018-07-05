@@ -35,13 +35,14 @@ if has('nvim')
   let g:deoplete#enable_at_startup = 1
 endif
 let g:deoplete#auto_complete_start_length = 3
-let g:deoplete#enable_at_startup = 1
 let g:deoplete#enable_smart_case = 1
 let g:deoplete#keyword_patterns = {}
 let g:deoplete#keyword_patterns['default'] = '\h\w*'
 let g:deoplete#omni#input_patterns = {}
-let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const']
 let g:deoplete#sources#go#align_class = 1
+let g:deoplete#sources#go#gocode_binary = $HOME.'/devel/bin/gocode'
+let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const']
+let g:deoplete#sources#go#source_importer = 1
 "let g:deoplete#sources#go#gocode_binary = $GOPATH.'/bin/gocode'
 "let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const']
 set completeopt=longest,menuone " auto complete setting
