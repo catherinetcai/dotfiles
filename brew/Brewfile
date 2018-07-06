@@ -24,6 +24,7 @@ cask '1password'
 cask 'android-studio'
 # Git diff tool
 cask 'diffmerge'
+cask 'docker'
 cask 'flux'
 # Muh browsers
 cask 'firefox'
