@@ -1,6 +1,7 @@
 ### BASE LAPTOP DEPENDENCIES ###
 
 ## BASE ##
+brew 'awscli'
 brew 'dep'
 brew 'hugo'
 # Text Editor
