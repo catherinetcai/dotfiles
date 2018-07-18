@@ -48,6 +48,8 @@ Plug 'ekalinin/Dockerfile.vim'
 
 " Go
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+" Reference for GoCode setup
+" https://github.com/fatih/vim-go/issues/1873
 Plug 'mdempsky/gocode', { 'rtp': 'nvim', 'do': '~/.config/nvim/plugged/gocode/nvim/symlink.sh' }
 Plug 'zchee/deoplete-go', { 'do': 'make'}
 
