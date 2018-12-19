@@ -33,6 +33,8 @@ Plug 'jremmen/vim-ripgrep'
 " Plug 'junegunn/vim-easy-align'
 Plug 'tpope/vim-eunuch'
 
+" Time tracking
+Plug 'wakatime/vim-wakatime'
 
 " LANGUAGE/USAGE SPECIFIC
 " Uncomment for ones you actually want
