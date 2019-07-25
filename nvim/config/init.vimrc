@@ -12,6 +12,7 @@ Plug 'Shougo/neosnippet-snippets'
 
 " Color
 Plug 'flazz/vim-colorschemes'
+Plug 'arcticicestudio/nord-vim'
 
 " Git
 Plug 'airblade/vim-gitgutter'

@@ -58,5 +58,4 @@ autocmd BufNewFile,BufRead,BufEnter *.md,*.markdown :syntax match markdownIgnore
 " Trim whitespace on save
 autocmd BufWritePre * %s/\s\+$//e
 
-colorscheme molokai
-colorscheme molokai
+colorscheme nord
