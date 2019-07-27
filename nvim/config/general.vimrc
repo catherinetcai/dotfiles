@@ -1,8 +1,8 @@
 " General Vim Setup
 " Python 2/3 versions - HACK for if deoplete won't load with the host
 " for whatever reason. No reason to uncomment otherwise
-" let g:python_host_prog="$HOME/.pyenv/versions/neovim2/bin/python"
-" let g:python3_host_prog="$HOME/.pyenv/versions/neovim3/bin/python3"
+" let g:python_host_prog=expand('~/.pyenv/versions/neovim2/bin/python')
+" let g:python3_host_prog=expand('~/.pyenv/versions/neovim3/bin/python3')
 
 
 " DEFAULTS
