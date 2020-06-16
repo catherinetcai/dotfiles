@@ -10,6 +10,8 @@ brew 'neovim'
 brew 'openssl'
 # Pyenv dep
 brew 'readline'
+brew 'fzf'
+brew 'jq'
 # Searcher - faster grep
 brew 'ripgrep'
 brew 'tmux'
@@ -18,6 +20,8 @@ brew 'watch'
 brew 'xz'
 brew 'watchman'
 brew 'yarn'
+# Please stop dumping weird ccc garbage from U2F
+brew 'ykman'
 # For oh-my-zsh
 brew 'zsh'
 
