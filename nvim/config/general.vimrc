@@ -1,8 +1,8 @@
 " General Vim Setup
 " Python 2/3 versions - HACK for if deoplete won't load with the host
 " for whatever reason. No reason to uncomment otherwise
-" let g:python_host_prog="$HOME/.pyenv/versions/neovim2/bin/python"
-" let g:python3_host_prog="$HOME/.pyenv/versions/neovim3/bin/python3"
+" let g:python_host_prog=expand('~/.pyenv/versions/neovim2/bin/python')
+" let g:python3_host_prog=expand('~/.pyenv/versions/neovim3/bin/python3')
 
 
 " DEFAULTS
@@ -58,5 +58,11 @@ autocmd BufNewFile,BufRead,BufEnter *.md,*.markdown :syntax match markdownIgnore
 " Trim whitespace on save
 autocmd BufWritePre * %s/\s\+$//e
 
-colorscheme molokai
-colorscheme molokai
+colorscheme nord
+
+" Terminal Color Settings
+if &term =~# '256color' && ( &term =~# '^screen'  || &term =~# '^tmux' )
+  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+  set termguicolors
+endif

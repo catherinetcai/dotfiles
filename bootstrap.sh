@@ -22,6 +22,10 @@ install_brew_bundle_deps() {
   cd brew/ && brew bundle
 }
 
+install_oh_my_zsh() {
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+}
+
 tap_brew_bundle() {
   echo 'Tapping Brew bundle...'
   brew tap homebrew/bundle
@@ -38,7 +42,7 @@ fi
 tap_brew_bundle
 
 # Install brew bundle deps
-# install_brew_bundle_deps
+install_brew_bundle_deps
 
 # Installing Ruby global
 echo "Installing Ruby version $RUBY_VERSION"
@@ -55,6 +59,11 @@ pyenv install "$PYTHON_3_VERSION"
 echo 'Setting up .gitconfigs. Be warned, this will OVERWRITE your .gitconfig'
 cp system/.gitconfig $HOME/.gitconfig
 
+# Install oh-my-zsh
+echo 'Installing oh-my-zsh'
+install_oh_my_zsh
+
 # Put zsh configurations in their place
 echo 'Putting zsh configurations in their place. Be warned this will overwrite some stuff'
 cp -a system/zsh/. $HOME
+
