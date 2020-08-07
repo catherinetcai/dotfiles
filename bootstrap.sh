@@ -22,6 +22,12 @@ install_brew_bundle_deps() {
   cd brew/ && brew bundle
 }
 
+install_nord_colors() {
+  echo 'Installing Nord colors...'
+  echo 'Installing Nord directory colors...'
+  curl -o $HOME/.dir_colors https://raw.githubusercontent.com/arcticicestudio/nord-dircolors/v0.2.0/src/dir_colors
+}
+
 install_oh_my_zsh() {
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 }
@@ -50,6 +56,7 @@ rbenv install "$RUBY_VERSION"
 rbenv global "$RUBY_VERSION"
 
 # Installing Python global versions
+# A lot of the instructions are taken from here: https://github.com/deoplete-plugins/deoplete-jedi/wiki/Setting-up-Python-for-Neovim
 echo "Installing Python version $PYTHON_2_VERSION"
 pyenv install "$PYTHON_2_VERSION"
 echo "Installing Python version $PYTHON_3_VERSION"
@@ -67,3 +74,7 @@ install_oh_my_zsh
 echo 'Putting zsh configurations in their place. Be warned this will overwrite some stuff'
 cp -a system/zsh/. $HOME
 
+# Install zsh plugins
+git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-completions
+autoload -U compinit && compinit
+install_nord_colors

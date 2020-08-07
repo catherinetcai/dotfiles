@@ -12,6 +12,9 @@ brew 'openssl'
 brew 'readline'
 brew 'fzf'
 brew 'jq'
+# Window management
+brew 'koekeishiya/formulae/skhd'
+brew 'koekeishiya/formulae/yabai'
 # Searcher - faster grep
 brew 'ripgrep'
 brew 'tmux'
@@ -42,7 +45,7 @@ cask 'java'
 cask 'nordvpn'
 cask 'postico'
 # Window manager
-cask 'phoenix'
+# cask 'phoenix'
 cask 'slack'
 cask 'spotify'
 cask 'spotify-notifications'
