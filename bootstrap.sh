@@ -23,7 +23,6 @@ install_brew_bundle_deps() {
 }
 
 install_nord_colors() {
-  echo 'Installing Nord colors...'
   echo 'Installing Nord directory colors...'
   curl -o $HOME/.dir_colors https://raw.githubusercontent.com/arcticicestudio/nord-dircolors/v0.2.0/src/dir_colors
 }
