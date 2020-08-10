@@ -55,6 +55,10 @@ echo "Installing Ruby version $RUBY_VERSION"
 rbenv install "$RUBY_VERSION"
 rbenv global "$RUBY_VERSION"
 
+# Installing Rust
+echo "Installing Rust via Rustup"
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
 # Installing Python global versions
 # A lot of the instructions are taken from here: https://github.com/deoplete-plugins/deoplete-jedi/wiki/Setting-up-Python-for-Neovim
 echo "Installing Python version $PYTHON_2_VERSION"

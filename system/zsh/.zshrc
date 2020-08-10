@@ -1,3 +1,7 @@
+# Colors
+# From https://github.com/arcticicestudio/nord-dircolors
+test -r "~/.dir_colors" && eval $(dircolors ~/.dir_colors)
+
 source_file() {
   if [ -f "$1" ]; then
     echo "Sourcing $1 for zshrc"
@@ -14,7 +18,7 @@ do
   source_file $file
 done
 
-## All oh-my-zsh defaults that need cleaned ## 
+## All oh-my-zsh defaults that need cleaned ##
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
@@ -99,3 +103,11 @@ export LANG=en_US.UTF-8
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# Pulled from here to fix Nord colors
+# https://github.com/arcticicestudio/nord-dircolors/issues/7#issuecomment-509685386
+PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
+
+test -e ~/.dircolors && \
+   eval `dircolors -b ~/.dircolors`

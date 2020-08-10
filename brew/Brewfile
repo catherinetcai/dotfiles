@@ -2,6 +2,9 @@
 
 ## BASE ##
 brew 'awscli'
+# Annoyingly, to fix Nord color issuess:
+# https://github.com/arcticicestudio/nord-dircolors/issues/7
+brew 'coreutils'
 brew 'dep'
 brew 'hugo'
 # Text Editor
@@ -35,6 +38,9 @@ cask 'android-studio'
 # Git diff tool
 cask 'diffmerge'
 cask 'docker'
+# Install font
+tap 'homebrew/cask-fonts'
+cask 'font-fira-code'
 cask 'flux'
 # Muh browsers
 cask 'firefox'
