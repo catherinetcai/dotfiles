@@ -18,9 +18,12 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='molokai'
 
 " CtrlP
-if exists("g:ctrl_user_command")
-  unlet g:ctrlp_user_command
+if executable('rg')
+  let g:ctrlp_user_command = 'rg %s --files --color=never --glob ""'
+  let g:ctrlp_use_caching = 0
 endif
+" Use git to list files
+let g:ctrlp_user_command = ['.git/', 'git ls-files --cached --others  --exclude-standard %s']
 " Custom ignore for CTRLP
 let g:ctrlp_custom_ignore = 'node_modules\|DS_STORE\|vendor'
 " Allow dotfiles
