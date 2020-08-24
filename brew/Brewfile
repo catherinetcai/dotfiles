@@ -25,6 +25,8 @@ brew 'tmux'
 brew 'watch'
 brew 'xz'
 brew 'watchman'
+# Need this in order for Yabai/Nibar/Uebersicht to run well
+brew 'websocketd'
 brew 'yarn'
 # Please stop dumping weird ccc garbage from U2F
 brew 'ykman'
@@ -55,6 +57,7 @@ cask 'postico'
 cask 'slack'
 cask 'spotify'
 cask 'spotify-notifications'
+cask 'ubersicht'
 cask 'vlc'
 
 ### LANGUAGES ###

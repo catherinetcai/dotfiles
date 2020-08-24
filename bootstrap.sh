@@ -6,9 +6,9 @@
 # * Brew
 
 ## Update or change these vars
-PYTHON_2_VERSION=2.7.14
-PYTHON_3_VERSION=3.6.5
-RUBY_VERSION=2.4.4
+PYTHON_2_VERSION=2.7.18
+PYTHON_3_VERSION=3.8.5
+RUBY_VERSION=2.7.1
 
 install_brew() {
   echo 'Installing Homebrew...'
@@ -25,6 +25,10 @@ install_brew_bundle_deps() {
 install_nord_colors() {
   echo 'Installing Nord directory colors...'
   curl -o $HOME/.dir_colors https://raw.githubusercontent.com/arcticicestudio/nord-dircolors/v0.2.0/src/dir_colors
+}
+
+install_nibar() {
+  git clone https://github.com/marshallbrekka/nibar $HOME/Library/Application\ Support/Übersicht/widgets/nibar
 }
 
 install_oh_my_zsh() {
@@ -81,3 +85,4 @@ cp -a system/zsh/. $HOME
 git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-completions
 autoload -U compinit && compinit
 install_nord_colors
+install_nibar
