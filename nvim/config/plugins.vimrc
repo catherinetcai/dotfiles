@@ -7,6 +7,10 @@ let g:ale_completion_enabled = 1
 let g:ale_lint_on_text_changed = 'never'
 let g:ale_sign_error = '✖'
 let g:ale_sign_warning = '⚠'
+" Use gopls instead of gocode
+let g:ale_linters = {
+	\ 'go': ['gopls'],
+	\}
 
 " Airline
 " Airline with Ale
@@ -42,14 +46,10 @@ call deoplete#custom#var('enable_smart_case', 1)
 call deoplete#custom#var('keyword_patterns', { 'default': '\h\w*' })
 call deoplete#custom#var('omni', 'input_patterns', {})
 let g:deoplete#sources#go#align_class = 1
+" https://github.com/Shougo/deoplete.nvim/issues/965 - Fixes gopls
 call deoplete#custom#option('omni_patterns', { 'go': '[^. *\t]\.\w*' })
-" https://github.com/fatih/vim-go/pull/2231/files
-" No longer use gocode for stuff
-"let g:deoplete#sources#go#gocode_binary = $HOME.'/go/bin/gocode'
 let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const']
 let g:deoplete#sources#go#source_importer = 1
-"let g:deoplete#sources#go#gocode_binary = $GOPATH.'/bin/gocode'
-"let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const']
 set completeopt=longest,menuone " auto complete setting
 set completeopt+=noinsert
 set completeopt+=noselect
@@ -66,10 +66,12 @@ let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_types = 1
-" Use neosnippet, but this is not installed
-" let g:go_snippet_engine = "neosnippet"
 let g:go_term_enabled = 1
 let g:go_term_mode = "split"
+" Gopls additions since gocode is borked
+" https://github.com/golang/tools/blob/master/gopls/doc/vim.md
+let g:go_def_mode='gopls'
+let g:go_info_mode='gopls'
 
 " Hashicorp
 " Terraform
