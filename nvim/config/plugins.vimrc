@@ -37,13 +37,15 @@ let g:ctrlp_max_depth=40
 if has('nvim')
   let g:deoplete#enable_at_startup = 1
 endif
-let g:deoplete#auto_complete_start_length = 3
-let g:deoplete#enable_smart_case = 1
-let g:deoplete#keyword_patterns = {}
-let g:deoplete#keyword_patterns['default'] = '\h\w*'
-let g:deoplete#omni#input_patterns = {}
+call deoplete#custom#var('auto_complete_start_length', 3)
+call deoplete#custom#var('enable_smart_case', 1)
+call deoplete#custom#var('keyword_patterns', { 'default': '\h\w*' })
+call deoplete#custom#var('omni', 'input_patterns', {})
 let g:deoplete#sources#go#align_class = 1
-let g:deoplete#sources#go#gocode_binary = $HOME.'/go/bin/gocode'
+call deoplete#custom#option('omni_patterns', { 'go': '[^. *\t]\.\w*' })
+" https://github.com/fatih/vim-go/pull/2231/files
+" No longer use gocode for stuff
+"let g:deoplete#sources#go#gocode_binary = $HOME.'/go/bin/gocode'
 let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const']
 let g:deoplete#sources#go#source_importer = 1
 "let g:deoplete#sources#go#gocode_binary = $GOPATH.'/bin/gocode'
