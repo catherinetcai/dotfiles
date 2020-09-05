@@ -9,6 +9,8 @@ Installing all of xcode is a good start.
 ## Bootstraps
 * brew + brew bundler
 * neovim + vim-plug
+* tmux + tpm
+* yabai
 * zsh + oh-my-zsh
 * Anything outlined in the [Brewfile](brew/Brewfile)
 
