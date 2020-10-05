@@ -31,6 +31,10 @@ install_nibar() {
   git clone https://github.com/marshallbrekka/nibar $HOME/Library/Application\ Support/Übersicht/widgets/nibar
 }
 
+install_simplebar() {
+  git clone https://github.com/catherinetcai/simple-bar $HOME/Library/Application\ Support/Übersicht/widgets/simple-bar
+}
+
 install_oh_my_zsh() {
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 }

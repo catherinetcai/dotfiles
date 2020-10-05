@@ -47,7 +47,9 @@ call deoplete#custom#var('keyword_patterns', { 'default': '\h\w*' })
 call deoplete#custom#var('omni', 'input_patterns', {})
 let g:deoplete#sources#go#align_class = 1
 " https://github.com/Shougo/deoplete.nvim/issues/965 - Fixes gopls
-call deoplete#custom#option('omni_patterns', { 'go': '[^. *\t]\.\w*' })
+call deoplete#custom#option('omni_patterns', {
+\ 'go': '[^. *\t]\.\w*',
+\})
 let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const']
 let g:deoplete#sources#go#source_importer = 1
 set completeopt=longest,menuone " auto complete setting
