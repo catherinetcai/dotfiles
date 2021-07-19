@@ -2,6 +2,9 @@
 
 ## BASE ##
 brew 'awscli'
+# Annoyingly, to fix Nord color issuess:
+# https://github.com/arcticicestudio/nord-dircolors/issues/7
+brew 'coreutils'
 brew 'dep'
 brew 'hugo'
 # Text Editor
@@ -12,6 +15,9 @@ brew 'openssl'
 brew 'readline'
 brew 'fzf'
 brew 'jq'
+# Window management
+brew 'koekeishiya/formulae/skhd'
+brew 'koekeishiya/formulae/yabai'
 # Searcher - faster grep
 brew 'ripgrep'
 brew 'tmux'
@@ -19,6 +25,8 @@ brew 'tmux'
 brew 'watch'
 brew 'xz'
 brew 'watchman'
+# Need this in order for Yabai/Nibar/Uebersicht to run well
+brew 'websocketd'
 brew 'yarn'
 # Please stop dumping weird ccc garbage from U2F
 brew 'ykman'
@@ -32,6 +40,9 @@ cask 'android-studio'
 # Git diff tool
 cask 'diffmerge'
 cask 'docker'
+# Install font
+tap 'homebrew/cask-fonts'
+cask 'font-fira-code'
 cask 'flux'
 # Muh browsers
 cask 'firefox'
@@ -42,10 +53,11 @@ cask 'java'
 cask 'nordvpn'
 cask 'postico'
 # Window manager
-cask 'phoenix'
+# cask 'phoenix'
 cask 'slack'
 cask 'spotify'
 cask 'spotify-notifications'
+cask 'ubersicht'
 cask 'vlc'
 
 ### LANGUAGES ###

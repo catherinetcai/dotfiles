@@ -6,9 +6,9 @@
 # * Brew
 
 ## Update or change these vars
-PYTHON_2_VERSION=2.7.14
-PYTHON_3_VERSION=3.6.5
-RUBY_VERSION=2.4.4
+PYTHON_2_VERSION=2.7.18
+PYTHON_3_VERSION=3.8.5
+RUBY_VERSION=2.7.1
 
 install_brew() {
   echo 'Installing Homebrew...'
@@ -20,6 +20,19 @@ install_brew() {
 install_brew_bundle_deps() {
   echo 'Installing Brew bundle deps...'
   cd brew/ && brew bundle
+}
+
+install_nord_colors() {
+  echo 'Installing Nord directory colors...'
+  curl -o $HOME/.dir_colors https://raw.githubusercontent.com/arcticicestudio/nord-dircolors/v0.2.0/src/dir_colors
+}
+
+install_nibar() {
+  git clone https://github.com/marshallbrekka/nibar $HOME/Library/Application\ Support/Übersicht/widgets/nibar
+}
+
+install_simplebar() {
+  git clone https://github.com/catherinetcai/simple-bar $HOME/Library/Application\ Support/Übersicht/widgets/simple-bar
 }
 
 install_oh_my_zsh() {
@@ -49,7 +62,12 @@ echo "Installing Ruby version $RUBY_VERSION"
 rbenv install "$RUBY_VERSION"
 rbenv global "$RUBY_VERSION"
 
+# Installing Rust
+echo "Installing Rust via Rustup"
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
 # Installing Python global versions
+# A lot of the instructions are taken from here: https://github.com/deoplete-plugins/deoplete-jedi/wiki/Setting-up-Python-for-Neovim
 echo "Installing Python version $PYTHON_2_VERSION"
 pyenv install "$PYTHON_2_VERSION"
 echo "Installing Python version $PYTHON_3_VERSION"
@@ -67,3 +85,8 @@ install_oh_my_zsh
 echo 'Putting zsh configurations in their place. Be warned this will overwrite some stuff'
 cp -a system/zsh/. $HOME
 
+# Install zsh plugins
+git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-completions
+autoload -U compinit && compinit
+install_nord_colors
+install_nibar

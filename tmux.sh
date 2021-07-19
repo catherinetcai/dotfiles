@@ -9,9 +9,9 @@ function reload_tmux() {
 }
 
 function copy_tmux_conf() {
-  cp ./tmux/tmux.conf $HOME
+  cp ./tmux/tmux.conf $HOME/.tmux.conf
 }
 
-# install_tpm
+install_tpm
 copy_tmux_conf
 reload_tmux
